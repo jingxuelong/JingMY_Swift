@@ -3,18 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A4C165E96B4E032B4F9AD39D /* Pods_JingMY_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C80AED57A5D7CA6A1451113 /* Pods_JingMY_Swift.framework */; };
 		C6FF14B822B2132200A994B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14B722B2132200A994B0 /* AppDelegate.swift */; };
 		C6FF14BA22B2132200A994B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14B922B2132200A994B0 /* ViewController.swift */; };
-		C6FF14BD22B2132200A994B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6FF14BB22B2132200A994B0 /* Main.storyboard */; };
 		C6FF14BF22B2132300A994B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6FF14BE22B2132300A994B0 /* Assets.xcassets */; };
 		C6FF14C222B2132300A994B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6FF14C022B2132300A994B0 /* LaunchScreen.storyboard */; };
 		C6FF14CD22B2132300A994B0 /* JingMY_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14CC22B2132300A994B0 /* JingMY_SwiftTests.swift */; };
 		C6FF14D822B2132300A994B0 /* JingMY_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14D722B2132300A994B0 /* JingMY_SwiftUITests.swift */; };
+		C6FF14E922B2258A00A994B0 /* BaseNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14E822B2258A00A994B0 /* BaseNavigationVC.swift */; };
+		C6FF14EB22B225FA00A994B0 /* BaseTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14EA22B225FA00A994B0 /* BaseTabBarVC.swift */; };
+		C6FF14ED22B22BCC00A994B0 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14EC22B22BCC00A994B0 /* BaseController.swift */; };
+		C6FF14F022B22C4A00A994B0 /* LeftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14EF22B22C4A00A994B0 /* LeftController.swift */; };
+		C6FF14F222B22C7400A994B0 /* MiddleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14F122B22C7400A994B0 /* MiddleController.swift */; };
+		C6FF14F422B22C7D00A994B0 /* RightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14F322B22C7D00A994B0 /* RightController.swift */; };
+		C6FF14F622B22E8100A994B0 /* TestTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14F522B22E8100A994B0 /* TestTimerController.swift */; };
+		C6FF14F922B2329500A994B0 /* DownLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14F822B2329500A994B0 /* DownLoadManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +46,6 @@
 		C6FF14B422B2132200A994B0 /* JingMY_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JingMY_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6FF14B722B2132200A994B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6FF14B922B2132200A994B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C6FF14BC22B2132200A994B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6FF14BE22B2132300A994B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6FF14C122B2132300A994B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6FF14C322B2132300A994B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +55,14 @@
 		C6FF14D322B2132300A994B0 /* JingMY_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JingMY_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6FF14D722B2132300A994B0 /* JingMY_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JingMY_SwiftUITests.swift; sourceTree = "<group>"; };
 		C6FF14D922B2132300A994B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6FF14E822B2258A00A994B0 /* BaseNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationVC.swift; sourceTree = "<group>"; };
+		C6FF14EA22B225FA00A994B0 /* BaseTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarVC.swift; sourceTree = "<group>"; };
+		C6FF14EC22B22BCC00A994B0 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		C6FF14EF22B22C4A00A994B0 /* LeftController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftController.swift; sourceTree = "<group>"; };
+		C6FF14F122B22C7400A994B0 /* MiddleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleController.swift; sourceTree = "<group>"; };
+		C6FF14F322B22C7D00A994B0 /* RightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightController.swift; sourceTree = "<group>"; };
+		C6FF14F522B22E8100A994B0 /* TestTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimerController.swift; sourceTree = "<group>"; };
+		C6FF14F822B2329500A994B0 /* DownLoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownLoadManager.swift; sourceTree = "<group>"; };
 		EBDBA80A4A43ACDB669C2934 /* Pods-JingMY_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JingMY_Swift.debug.xcconfig"; path = "Target Support Files/Pods-JingMY_Swift/Pods-JingMY_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		FF9FD7B88BA5A2B07909D397 /* Pods-JingMY_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JingMY_Swift.release.xcconfig"; path = "Target Support Files/Pods-JingMY_Swift/Pods-JingMY_Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,9 +126,12 @@
 		C6FF14B622B2132200A994B0 /* JingMY_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				C6FF14E722B2256000A994B0 /* BaseRootVC */,
+				C6FF14EE22B22BF500A994B0 /* MainVC */,
+				C6FF14F722B2327100A994B0 /* Manager */,
 				C6FF14B722B2132200A994B0 /* AppDelegate.swift */,
 				C6FF14B922B2132200A994B0 /* ViewController.swift */,
-				C6FF14BB22B2132200A994B0 /* Main.storyboard */,
+				C6FF14F522B22E8100A994B0 /* TestTimerController.swift */,
 				C6FF14BE22B2132300A994B0 /* Assets.xcassets */,
 				C6FF14C022B2132300A994B0 /* LaunchScreen.storyboard */,
 				C6FF14C322B2132300A994B0 /* Info.plist */,
@@ -140,13 +157,40 @@
 			path = JingMY_SwiftUITests;
 			sourceTree = "<group>";
 		};
+		C6FF14E722B2256000A994B0 /* BaseRootVC */ = {
+			isa = PBXGroup;
+			children = (
+				C6FF14EA22B225FA00A994B0 /* BaseTabBarVC.swift */,
+				C6FF14E822B2258A00A994B0 /* BaseNavigationVC.swift */,
+				C6FF14EC22B22BCC00A994B0 /* BaseController.swift */,
+			);
+			path = BaseRootVC;
+			sourceTree = "<group>";
+		};
+		C6FF14EE22B22BF500A994B0 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				C6FF14EF22B22C4A00A994B0 /* LeftController.swift */,
+				C6FF14F122B22C7400A994B0 /* MiddleController.swift */,
+				C6FF14F322B22C7D00A994B0 /* RightController.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		C6FF14F722B2327100A994B0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C6FF14F822B2329500A994B0 /* DownLoadManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		CC117B3790413CC0F21C75E7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				EBDBA80A4A43ACDB669C2934 /* Pods-JingMY_Swift.debug.xcconfig */,
 				FF9FD7B88BA5A2B07909D397 /* Pods-JingMY_Swift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,7 +302,6 @@
 			files = (
 				C6FF14C222B2132300A994B0 /* LaunchScreen.storyboard in Resources */,
 				C6FF14BF22B2132300A994B0 /* Assets.xcassets in Resources */,
-				C6FF14BD22B2132200A994B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +368,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6FF14F222B22C7400A994B0 /* MiddleController.swift in Sources */,
+				C6FF14F022B22C4A00A994B0 /* LeftController.swift in Sources */,
+				C6FF14F422B22C7D00A994B0 /* RightController.swift in Sources */,
+				C6FF14F922B2329500A994B0 /* DownLoadManager.swift in Sources */,
 				C6FF14BA22B2132200A994B0 /* ViewController.swift in Sources */,
+				C6FF14F622B22E8100A994B0 /* TestTimerController.swift in Sources */,
+				C6FF14EB22B225FA00A994B0 /* BaseTabBarVC.swift in Sources */,
+				C6FF14ED22B22BCC00A994B0 /* BaseController.swift in Sources */,
+				C6FF14E922B2258A00A994B0 /* BaseNavigationVC.swift in Sources */,
 				C6FF14B822B2132200A994B0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,14 +413,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C6FF14BB22B2132200A994B0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C6FF14BC22B2132200A994B0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C6FF14C022B2132300A994B0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -505,6 +548,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JingMY_Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,7 +557,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -525,6 +569,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JingMY_Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -533,7 +578,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

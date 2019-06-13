@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = initTabbarVC()
+        window?.makeKeyAndVisible()
         return true
     }
 
@@ -40,7 +43,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    
 }
 
+//MARK:-pravite menth
+extension AppDelegate{
+    func initTabbarVC() -> UIViewController {
+        let vc1 = initNaVC(viewController: LeftController(), name: "first")
+        let vc2 = initNaVC(viewController: MiddleController(), name: "second")
+        let vc3 = initNaVC(viewController: RightController(), name: "third")
+        let tabbarVC = BaseTabBarVC()
+        tabbarVC.viewControllers = [vc1,vc2,vc3]
+        return tabbarVC
+    }
+    
+    func initNaVC( viewController: UIViewController, name: String) -> UIViewController {
+        viewController.title = name
+        let navc = BaseNavigationVC(rootViewController: viewController)
+        navc.title = name
+        return navc;
+    }
+    
+    func initNaVC( viewController: UIViewController, name: String, imageName: String) -> UIViewController {
+        viewController.title = name
+        let navc = BaseNavigationVC(rootViewController: viewController)
+        navc.title = name
+        return navc;
+    }
+}

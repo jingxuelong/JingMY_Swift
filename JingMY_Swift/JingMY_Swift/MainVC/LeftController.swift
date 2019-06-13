@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  SwiftLayout
+//  LeftController.swift
+//  JingMY_Swift
 //
 //  Created by jing_mac on 2019/6/13.
 //  Copyright © 2019 jing_mac. All rights reserved.
@@ -9,8 +9,8 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
-    
+class LeftController: BaseController {
+
     lazy var topView:UIView = UIView()
     lazy var leftView:UIView = UIView()
     lazy var rightView:UIView = UIView()
@@ -20,17 +20,14 @@ class ViewController: UIViewController {
     let wide = UIScreen.main.bounds.size.width
     var countLayOut = 0
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setItems()
         layOutItems()
-    }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
         
-        //        layOutItems()
+        
+        
     }
     
     
@@ -93,15 +90,12 @@ class ViewController: UIViewController {
     }
     
     @objc func tap(_ sender:Any){
-        //        centerlabel.snp.removeConstraints()
-        UIView.animate(withDuration: 1) {
-            self.centerlabel.snp.updateConstraints { (maker) in
-                //                maker.size.equalTo(CGSize(width: self.wide/3.0, height: 400))
-                //                maker.center.equalTo(CGPoint(x: self.wide/2.0, y: 400))
-                maker.width.lessThanOrEqualTo(100)
-            }
-            
-        }
+        present(TestTimerController(), animated: true, completion: nil)
+        
+        /**
+        self.centerlabel.snp.updateConstraints { (maker) in
+            maker.width.lessThanOrEqualTo(100)
+        }*/
     }
     
 }
