@@ -8,95 +8,136 @@
 
 import UIKit
 import SnapKit
+import MapKit
+
 
 class LeftController: BaseController {
-
-    lazy var topView:UIView = UIView()
-    lazy var leftView:UIView = UIView()
-    lazy var rightView:UIView = UIView()
-    lazy var bottomView:UIView = UIView()
-    lazy var centerlabel:UILabel = UILabel()
     
-    let wide = UIScreen.main.bounds.size.width
-    var countLayOut = 0
+    lazy var mapView: MKMapView = MKMapView()
+    lazy var startButton: UIButton = UIButton()
+    lazy var rightView: UIView = UIView()
+    var isShow: Bool = false
+    let lock: NSLock = NSLock()
+    lazy var locationManager = CLLocationManager()
+    var locationArray: [CLLocationCoordinate2D] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setItems()
-        layOutItems()
+        checkLocationPrivate()
+        
+        testData()
         
         
         
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        layoutItems()
+    }
     
-    func layOutItems() {
-        print(countLayOut)
-        centerlabel.snp.makeConstraints { (maker) in
-            maker.center.equalToSuperview()
-            maker.width.lessThanOrEqualTo(wide/2.0)
+    func checkLocationPrivate() {
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
         }
-        topView.snp.makeConstraints({ (maker) in
-            maker.top.equalToSuperview()
-            maker.left.equalToSuperview()
-            maker.right.equalToSuperview()
-            maker.bottom.equalTo(centerlabel.snp_top)
-        })
+    }
+    
+    
+    
+    
+    func layoutItems() {
+        print(view.safeAreaInsets)
+        mapView.snp.makeConstraints { (maker) in
+            maker.top.equalToSuperview().offset(view.safeAreaInsets.top)
+            maker.left.right.equalToSuperview()
+            maker.bottom.equalToSuperview().offset(-view.safeAreaInsets.bottom)
+        }
+        let startBtnSize = CGSize(width: 100, height: 30)
         
-        leftView.snp.makeConstraints({ (maker) in
-            maker.top.equalTo(topView.snp_bottom)
-            maker.left.equalToSuperview()
-            maker.right.equalTo(centerlabel.snp_left)
-            maker.bottom.equalTo(bottomView.snp_top)
-        })
-        rightView.snp.makeConstraints({ (maker) in
-            maker.top.equalTo(topView.snp_bottom)
-            maker.left.equalTo(centerlabel.snp_right)
-            maker.right.equalToSuperview()
-            maker.bottom.equalTo(bottomView.snp_top)
-        })
-        bottomView.snp.makeConstraints({ (maker) in
-            maker.bottom.equalToSuperview()
-            maker.left.equalToSuperview()
-            maker.right.equalToSuperview()
-            maker.top.equalTo(centerlabel.snp_bottom)
-        })
+        startButton.snp.makeConstraints {  (maker) in
+            maker.size.equalTo(startBtnSize)
+            maker.centerY.equalToSuperview()
+            maker.centerX.equalTo(wide - startBtnSize.width)
+        }
         
     }
     
     func setItems() {
-        topView.backgroundColor = UIColor.orange
-        view.addSubview(topView)
+        mapView.showsCompass = true
+        mapView.showsUserLocation = true
+        mapView.delegate = self
+        view.addSubview(mapView)
         
-        leftView.backgroundColor = UIColor.lightGray
-        view.addSubview(leftView)
-        
-        rightView.backgroundColor = UIColor.yellow
-        view.addSubview(rightView)
-        
-        bottomView.backgroundColor = UIColor.blue
-        view.addSubview(bottomView)
-        
-        centerlabel.backgroundColor = UIColor.white
-        view.addSubview(centerlabel)
-        let gesTap = UITapGestureRecognizer(target: self, action: #selector(tap(_:)))
-        centerlabel.text = "slfklsdfjlffdfdsfdslfklsdfjlffdfdsfdsslfklsdfjlffdfdsfdsslfklsdfjlffdfdsfdsslfklsdfjlffdfdsfdss"
-        centerlabel.numberOfLines = 0
-        centerlabel.isUserInteractionEnabled = true
-        centerlabel.addGestureRecognizer(gesTap)
+        startButton.layer.cornerRadius = 5
+        startButton.setTitle("Start", for: .normal)
+        view.addSubview(startButton)
+        startButton.addTarget(self, action: #selector(startButtonClick(_:)), for: .touchUpInside)
+        startButton.backgroundColor = UIColor.white
         
         
     }
     
-    @objc func tap(_ sender:Any){
-        present(TestTimerController(), animated: true, completion: nil)
+    @objc func startButtonClick(_ sender:UIButton){
+        DispatchQueue.global().async {[weak self] in
+            self?.showLine()
+        }
+    }
+    
+    //        present(TestTimerController(), animated: true, completion: nil)
+
+}
+
+
+
+//MARK:-MKMapViewDelegate
+
+extension LeftController:MKMapViewDelegate{
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        if !isShow {
+            mapView.showAnnotations([userLocation], animated: true)
+            isShow = true
+        }
         
-        /**
-        self.centerlabel.snp.updateConstraints { (maker) in
-            maker.width.lessThanOrEqualTo(100)
-        }*/
+        lock.lock()
+        locationArray.append(userLocation.coordinate)
+        lock.unlock()
+        
+        
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let lineView = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        lineView.strokeColor = UIColor.blue
+        lineView.lineWidth = 5
+        return lineView
+    }
+    
+    func testData() {
+        let abc = "nameabc"
+        let url = URL(fileURLWithPath: abc)
+        let ocUrl = NSURL(fileURLWithPath: abc)
+        print(url.absoluteString,ocUrl.absoluteString!)
+        URL
+        
+        
+    }
+    
+    func showLine() {
+        
+        
+        var pointArr: [MKMapPoint] = []
+        for item in locationArray{
+            pointArr.append(MKMapPoint(item))
+            print(item)
+        }
+        let line = MKPolyline(points: pointArr, count: pointArr.count)
+        DispatchQueue.main.async {[weak self] in
+            let overlays:[MKOverlay] = (self?.mapView.overlays)!
+            self?.mapView.removeOverlays(overlays)
+            self?.mapView.addOverlay(line)
+        }
     }
     
 }
-

@@ -9,6 +9,8 @@
 import UIKit
 
 class BaseController: UIViewController {
+    public let wide = UIScreen.main.bounds.size.width
+    public let height = UIScreen.main.bounds.size.height
 
     override func viewDidLoad() {
         super.viewDidLoad()
