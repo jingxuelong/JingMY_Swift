@@ -24,6 +24,7 @@
 		C6FF14F922B2329500A994B0 /* DownLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14F822B2329500A994B0 /* DownLoadManager.swift */; };
 		C6FF14FB22B32EAF00A994B0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14FA22B32EAF00A994B0 /* LocationManager.swift */; };
 		C6FF14FE22B3301E00A994B0 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14FD22B3301E00A994B0 /* LocationModel.swift */; };
+		C6FF150422B4A5AB00A994B0 /* ConstansAndKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF150322B4A5AB00A994B0 /* ConstansAndKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		C6FF14F822B2329500A994B0 /* DownLoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownLoadManager.swift; sourceTree = "<group>"; };
 		C6FF14FA22B32EAF00A994B0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C6FF14FD22B3301E00A994B0 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		C6FF150322B4A5AB00A994B0 /* ConstansAndKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstansAndKey.swift; sourceTree = "<group>"; };
 		EBDBA80A4A43ACDB669C2934 /* Pods-JingMY_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JingMY_Swift.debug.xcconfig"; path = "Target Support Files/Pods-JingMY_Swift/Pods-JingMY_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		FF9FD7B88BA5A2B07909D397 /* Pods-JingMY_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JingMY_Swift.release.xcconfig"; path = "Target Support Files/Pods-JingMY_Swift/Pods-JingMY_Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 		C6FF14B622B2132200A994B0 /* JingMY_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				C6FF150222B4A58000A994B0 /* Tools */,
 				C6FF14FC22B3300E00A994B0 /* Models */,
 				C6FF14E722B2256000A994B0 /* BaseRootVC */,
 				C6FF14EE22B22BF500A994B0 /* MainVC */,
@@ -197,6 +200,14 @@
 				C6FF14FD22B3301E00A994B0 /* LocationModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C6FF150222B4A58000A994B0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C6FF150322B4A5AB00A994B0 /* ConstansAndKey.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		CC117B3790413CC0F21C75E7 /* Pods */ = {
@@ -392,6 +403,7 @@
 				C6FF14F622B22E8100A994B0 /* TestTimerController.swift in Sources */,
 				C6FF14EB22B225FA00A994B0 /* BaseTabBarVC.swift in Sources */,
 				C6FF14ED22B22BCC00A994B0 /* BaseController.swift in Sources */,
+				C6FF150422B4A5AB00A994B0 /* ConstansAndKey.swift in Sources */,
 				C6FF14E922B2258A00A994B0 /* BaseNavigationVC.swift in Sources */,
 				C6FF14B822B2132200A994B0 /* AppDelegate.swift in Sources */,
 			);

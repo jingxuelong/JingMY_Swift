@@ -119,7 +119,6 @@ extension LeftController:MKMapViewDelegate{
         let url = URL(fileURLWithPath: abc)
         let ocUrl = NSURL(fileURLWithPath: abc)
         print(url.absoluteString,ocUrl.absoluteString!)
-        URL
         
         
     }
