@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-JingMY_Swift/Pods-JingMY_Swift-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/XLTools/XLTools.framework

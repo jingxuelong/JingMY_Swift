@@ -1,16 +1,24 @@
 PODS:
+  - Alamofire (4.8.2)
   - SnapKit (4.2.0)
+  - XLTools (1.0.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
   - SnapKit (~> 4.2.0)
+  - XLTools
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - SnapKit
+    - XLTools
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  XLTools: 67318162b445e7a2e2b5099b4e34d35ced2cc7f1
 
-PODFILE CHECKSUM: e9f58727fdb1de06510debaeae27121fd5321e5a
+PODFILE CHECKSUM: d6504bfcf32b37d87c410d0b40289bbf1c1b51e8
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.7.2

@@ -3,15 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88739EC022F8305300674601 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88739EBF22F8305300674601 /* Media.xcassets */; };
+		88739EC222F8368000674601 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88739EC122F8368000674601 /* TableViewCell.swift */; };
 		A4C165E96B4E032B4F9AD39D /* Pods_JingMY_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C80AED57A5D7CA6A1451113 /* Pods_JingMY_Swift.framework */; };
 		C6FF14B822B2132200A994B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14B722B2132200A994B0 /* AppDelegate.swift */; };
 		C6FF14BA22B2132200A994B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14B922B2132200A994B0 /* ViewController.swift */; };
 		C6FF14BD22B2132200A994B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6FF14BB22B2132200A994B0 /* Main.storyboard */; };
-		C6FF14BF22B2132300A994B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6FF14BE22B2132300A994B0 /* Assets.xcassets */; };
 		C6FF14C222B2132300A994B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6FF14C022B2132300A994B0 /* LaunchScreen.storyboard */; };
 		C6FF14CD22B2132300A994B0 /* JingMY_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14CC22B2132300A994B0 /* JingMY_SwiftTests.swift */; };
 		C6FF14D822B2132300A994B0 /* JingMY_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF14D722B2132300A994B0 /* JingMY_SwiftUITests.swift */; };
@@ -36,11 +37,12 @@
 
 /* Begin PBXFileReference section */
 		5C80AED57A5D7CA6A1451113 /* Pods_JingMY_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JingMY_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88739EBF22F8305300674601 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		88739EC122F8368000674601 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C6FF14B422B2132200A994B0 /* JingMY_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JingMY_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6FF14B722B2132200A994B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6FF14B922B2132200A994B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C6FF14BC22B2132200A994B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C6FF14BE22B2132300A994B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6FF14C122B2132300A994B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6FF14C322B2132300A994B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6FF14C822B2132300A994B0 /* JingMY_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JingMY_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,8 +116,9 @@
 			children = (
 				C6FF14B722B2132200A994B0 /* AppDelegate.swift */,
 				C6FF14B922B2132200A994B0 /* ViewController.swift */,
+				88739EC122F8368000674601 /* TableViewCell.swift */,
+				88739EBF22F8305300674601 /* Media.xcassets */,
 				C6FF14BB22B2132200A994B0 /* Main.storyboard */,
-				C6FF14BE22B2132300A994B0 /* Assets.xcassets */,
 				C6FF14C022B2132300A994B0 /* LaunchScreen.storyboard */,
 				C6FF14C322B2132300A994B0 /* Info.plist */,
 			);
@@ -146,7 +149,6 @@
 				EBDBA80A4A43ACDB669C2934 /* Pods-JingMY_Swift.debug.xcconfig */,
 				FF9FD7B88BA5A2B07909D397 /* Pods-JingMY_Swift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -257,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6FF14C222B2132300A994B0 /* LaunchScreen.storyboard in Resources */,
-				C6FF14BF22B2132300A994B0 /* Assets.xcassets in Resources */,
+				88739EC022F8305300674601 /* Media.xcassets in Resources */,
 				C6FF14BD22B2132200A994B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88739EC222F8368000674601 /* TableViewCell.swift in Sources */,
 				C6FF14BA22B2132200A994B0 /* ViewController.swift in Sources */,
 				C6FF14B822B2132200A994B0 /* AppDelegate.swift in Sources */,
 			);
@@ -502,8 +505,9 @@
 			baseConfigurationReference = EBDBA80A4A43ACDB669C2934 /* Pods-JingMY_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NJQSU8G793;
 				INFOPLIST_FILE = JingMY_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,7 +517,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -522,8 +526,9 @@
 			baseConfigurationReference = FF9FD7B88BA5A2B07909D397 /* Pods-JingMY_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NJQSU8G793;
 				INFOPLIST_FILE = JingMY_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -533,7 +538,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
